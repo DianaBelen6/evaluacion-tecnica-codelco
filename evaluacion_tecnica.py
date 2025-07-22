@@ -48,8 +48,7 @@ if tipo == "Servicio":
 
     puntaje_total = 0
     suma_ponderaciones = sum(p for _, p in criterios)
-    if abs(suma_ponderaciones - 1.0) > 0.001:
-        st.warning(f"⚠️ Las ponderaciones no suman 1.0 (suma actual: {suma_ponderaciones:.3f})")
+    
 
     for criterio, peso in criterios:
         valor = st.slider(criterio, 0, 100, 70, key=criterio)
@@ -127,4 +126,3 @@ if st.button("Guardar evaluación"):
         df.to_csv("evaluaciones.csv", index=False)
 
     st.success("✅ Evaluación guardada en 'evaluaciones.csv'")
-
