@@ -7,7 +7,7 @@ st.set_page_config(page_title="Evaluación Técnica Codelco", layout="wide")
 # ---------- ENCABEZADO ---------- #
 if st.button("Nueva evaluación"):
     st.session_state.clear()
-    st.experimental_rerun()
+    st.rerun()
 st.title("Formulario de Evaluación Técnica - Codelco")
 
 # Información del evaluador
